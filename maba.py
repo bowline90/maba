@@ -20,7 +20,7 @@ def print_mbr_info(mbr):
     print('Bootcode: '+mbr.print_bootcode())
 
 def print_mbr_partition(mbr,i):
-    r = mbr.print_partition(i)
+    r = mbr.print_partition(i-1)
     t = PrettyTable(['Index', 'First CHS','Last CHS','LBA First','# Sectors','Bootable bit','Partition Type'])
     t.add_row(r)
     print(t)
@@ -57,7 +57,7 @@ def print_gpt(gpt):
     print('-'*103)
 
 def print_gpt_partition(gpt,i):
-    r = gpt.partition(i)
+    r = gpt.partition(i-1)
     t = PrettyTable(['Index','Type GUID','Part GUID','First LBA','Last LBA','Flag attribute','Partition Name'])
     t.add_row(r)
     print(t)
