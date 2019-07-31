@@ -1,0 +1,208 @@
+0x00,Empty partition entry
+0x01,File system IBM DOS 2.0+ FAT12 as primary partition in first physical 32 MB of disk or as logical drive anywhere on disk (else use 06h instead)
+0x02,XENIX root
+0x03,XENIX usr
+0x04,FAT16 with less than 65536 sectors (32 MB). As primary partition it must reside in first physical 32 MB of disk, or as logical drive anywhere on disk (else use 06h instead)
+0x05,Extended partition with CHS addressing. It must reside within the first physical 8 GB of disk, else use 0Fh instead
+0x06,FAT16B with 65536 or more sectors. It must reside within the first 8 GB of disk unless used for logical drives in an 0Fh extended partition (else use 0Eh instead). Also used for FAT12 and FAT16 volumes in primary partitions if they are not residing in first physical 32 MB of disk
+0x07,IFS/HPFS/NTFS/exFAT/QNX "qnx"
+0x08,Logical sectored FAT12 or FAT16/OS/2 (FAT?)/AIX boot/split/QNX "qny"/Partition spanning multiple drives
+0x09,AIX data/boot/QNX "qnz"/Coherent file system/OS-9 RBF
+0x0A,Boot Manager/Coherent swap partition
+0x0B,FAT32 with CHS addressing
+0x0C,FAT32 with LBA
+0x0E,FAT16B with LBA
+0x0F,Extended partition with LBA
+0x10,?
+0x11,Logical sectored FAT12 or FAT16/Hidden FAT12
+0x12,Configuration partition (bootable FAT with MS-DOS[4][5][7])/Recovery partition (bootable FAT32 with Windows setup)/EISA configuration utility for the system/Hibernation partition/Diagnostics and firmware partition (bootable FAT)/Service partition (bootable FAT)/Rescue and Recovery partition
+0x14,Logical sectored FAT12 or FAT16/Hidden FAT16/Omega file system
+0x15,Hidden extended partition with CHS addressing/Swap
+0x16,Hidden FAT16B
+0x17,Hidden IFS/Hidden HPFS/Hidden NTFS/Hidden exFAT
+0x18,AST Zero Volt Suspend or SmartSleep partition
+0x19,Willowtech Photon coS
+0x1B,Hidden FAT32
+0x1C,Hidden FAT32 with LBA/ASUS recovery partition (Hidden FAT32 with LBA)
+0x1E,Hidden FAT16 with LBA
+0x1F,Hidden extended partition with LBA addressing
+0x20,Windows Mobile update XIP/Willowsoft Overture File System (OFS1) (see 19h)
+0x21,HP Volume Expansion/Oxygen FSo2 (Oxygen File System)
+0x22,Oxygen Extended Partition Table
+0x23,Windows Mobile boot XIP
+0x24,Logical sectored FAT12 or FAT16
+0x25,Windows Mobile IMGFS
+0x26,Reserved
+0x27,Windows Recovery Environment (RE) partition/Rescue partition/MirOS partition/RooterBOOT kernel partition (contains a raw ELF Linux kernel, no file system)
+0x2A,AtheOS file system (AthFS, AFS)/Reserved
+0x2B,SyllableSecure (SylStor), a variant of AthFS
+0x31,Reserved
+0x32,NOS
+0x33,Reserved
+0x34,Reserved
+0x35,JFS (OS/2 implementation of AIX Journaling File system)
+0x36,Reserved
+0x38,HEOS version 3.2, 2 GB partition
+0x39,Plan 9 edition 3 partition/THEOS version 4 spanned partition
+0x3B,THEOS version 4 extended partition
+0x3C,PqRP (PartitionMagic or DriveImage in progress)
+0x3D,Hidden NetWare
+0x40,PICK R83/Venix 80286
+0x41,Personal RISC Boot/Old Linux/Minix/PPC PReP (Power PC Reference Platform) Boot
+0x42,Secure File system (SFS)/Old Linux swap (disk shared with DR DOS 6.0)/Dynamic extended partition marker
+0x43,Old Linux native (disk shared with DR DOS 6.0)
+0x44,Norton GoBack, WildFile GoBack, Adaptec GoBack, Roxio GoBack
+0x45,Priam/Boot-US boot manager (1 cylinder)/EUMEL/ELAN (L2)
+0x46,EUMEL/ELAN 	EUMEL/ELAN (L2)
+0x47,EUMEL/ELAN 	EUMEL/ELAN (L2)
+0x48,EUMEL/ELAN 	EUMEL/ELAN (L2), ERGOS L3
+0x4A,Aquila/ALFS/THIN advanced lightweight file system for DOS
+0x4C,Aos (A2) file system (76)
+0x4D,Primary QNX POSIX volume on disk
+0x4E,Secondary QNX POSIX volume on disk
+0x4F,Tertiary QNX POSIX volume on disk/Boot/native file system
+0x50,Alternative native file system (80)/Read-only partition (old)/Lynx RTOS 	
+0x51,Novell/Read-write partition (Aux 1)
+0x52,CP/M-80/V/386 	
+0x53,Auxiliary 3 (WO)
+0x54,Dynamic Drive Overlay (DDO)
+0x55,EZ-Drive, Maxtor, MaxBlast, or DriveGuide INT 13h redirector volume
+0x56,Logical sectored FAT12 or FAT16/Disk Manager partition converted to EZ-BIOS/VFeature partitionned volume
+0x57,DrivePro/VNDI partition
+0x5C,Priam EDisk Partitioned Volume
+0x61,Hidden FAT12
+0x63,SCO Unix, ISC, UnixWare, AT&T System V/386, ix, MtXinu BSD 4.3 on Mach, GNU HURD/Hidden read-only FAT12
+0x64,Hidden FAT16/NetWare File System 286/2/PC-ARMOUR
+0x65,NetWare File System 386
+0x66,NetWare File System 386/Storage Management Services (SMS)/Hidden read-only FAT16
+0x67,Wolf Mountain
+0x68,NetWare 	
+0x69,NetWare 5/Novell Storage Services (NSS)
+0x6C,BSD slice (DragonFly BSD)
+0x70,DiskSecure multiboot
+0x71,Reserved
+0x72,APTI alternative FAT12 (CHS, SFN)/V7/x86
+0x73,Reserved
+0x74,Hidden FAT16B
+0x75,PC/IX
+0x76,Hidden read-only FAT16B (corresponds to F6h)[nb 6]
+0x77,VNDI, M2FS, M2CS
+0x78,XOSL bootloader file system
+0x79,APTI alternative FAT16 (CHS, SFN)
+0x7A,APTI alternative FAT16 (LBA, SFN)
+0x7B,APTI alternative FAT16B (CHS, SFN)
+0x7C,APTI alternative FAT32 (LBA, SFN)
+0x7D,APTI alternative FAT32 (CHS, SFN)
+0x7E,Level 2 cache
+0x7F,Reserved for individual or local use and temporary or experimental projects
+0x80,MINIX file system
+0x81,MINIX file system/Mitac Advanced Disk Manager
+0x82,Linux swap space/Solaris x86 (for Sun disklabels up to 2005)/PRIMOS
+0x83,Any native Linux file system
+0x84,APM hibernation/Hidden C: (FAT16)/Rapid Start hibernation data(possibly iFFS; possibly used for Intel SRT SSD cache as well)
+0x85,Linux extended
+0x86,Fault-tolerant FAT16B mirrored volume set/Linux RAID superblock with auto-detect (old)
+0x87,Fault-tolerant HPFS/NTFS mirrored volume set
+0x88,Linux plaintext partition table
+0x8A,Linux kernel image
+0x8B,Legacy fault-tolerant FAT32 mirrored volume set
+0x8C,Legacy fault-tolerant FAT32 mirrored volume set
+0x8D,Free FDISK 	Hidden FAT12
+0x8E,Linux LVM since 1999
+0x90,Hidden FAT16
+0x91,Hidden extended partition with CHS addressing
+0x92,Hidden FAT16B
+0x93,Amoeba native file system/Hidden Linux file system
+0x94,Amoeba bad block table
+0x95,EXOPC native
+0x96,ISO-9660 file system
+0x97,Hidden FAT32
+0x98,Hidden FAT32/Service partition (bootable FAT) ROM-DOS SuperBoot/Service partition (bootable FAT)
+0x99,Early Unix
+0x9A,Hidden FAT16
+0x9B,Hidden extended partition with LBA
+0x9E,VSTa/ForthOS
+0x9F,see B7h and B8h
+0xA0,Diagnostic partition for HP laptops/Hibernate partition
+0xA1,HP Volume Expansion/Hibernate partition
+0xA2,Hard Processor System (HPS) ARM preloader
+0xA3,HP Volume Expansion
+0xA4,HP Volume Expansion
+0xA5,BSD slice (BSD/386, 386BSD, NetBSD (before 1998-02-19), FreeBSD)
+0xA6,HP Volume Expansion/OpenBSD slice
+0xA7,NeXTSTEP
+0xA8,Apple Darwin, Mac OS X UFS
+0xA9,NetBSD slice
+0xAA,Olivetti MS-DOS FAT12 (1.44 MB)
+0xAB,Apple Darwin, Mac OS X boot/GO!
+0xAC,Apple RAID, Mac OS X RAID
+0xAD,ADFS / FileCore format
+0xAE,ShagOS file system
+0xAF,HFS and HFS+/ShagOS swap
+0xB0,Boot-Star dummy partition
+0xB1,HP Volume Expansion/QNX Neutrino power-safe file system
+0xB2,QNX Neutrino power-safe file system
+0xB3,HP Volume Expansion/QNX Neutrino power-safe file system
+0xB4,HP Volume Expansion
+0xB6,HP Volume Expansion/Corrupted fault-tolerant FAT16B mirrored master volume
+0xB7,BSDI native file system / swap
+0xEB,Corrupted fault-tolerant HPFS/NTFS mirrored master volume
+0xB8,BSDI swap / native file system
+0xBB,TS BootWizard 4 / OS Selector 5 for hidden partitions other than 01h, 04h, 06h, 07h, 0Bh, 0Ch, 0Eh and unformatted partitions/OEM Secure Zone/Corrupted fault-tolerant FAT32 mirrored master volume
+0xBC,Corrupted fault-tolerant FAT32 mirrored master volume/Acronis Secure Zone/Backup Capsule
+0xBD,BonnyDOS/286
+0xBE,Solaris 8 boot
+0xBF,Solaris x86 (for Sun disklabels, since 2005)
+0xC0,DR-DOS, Multiuser DOS, REAL/32 	Secured FAT partition (smaller than 32 MB)
+0xC1,Secured FAT12
+0xC2,Hidden Linux native file system
+0xC3,Hidden Linux swap
+0xC4,Secured FAT16
+0xC5,Secured extended partition with CHS addressing 
+0xC6,Secured FAT16B (corresponds with 06h)/Corrupted fault-tolerant FAT16B mirrored slave volume
+0xC7,Syrinx boot/Corrupted fault-tolerant HPFS/NTFS mirrored slave volume
+0xC8,Reserved for DR-DOS since 1997
+0xC9,Reserved for DR-DOS since 1997
+0xCA,Reserved for DR-DOS since 1997
+0xCB,Secured FAT32
+0xEB,Corrupted fault-tolerant FAT32 mirrored slave volume
+0xCC,Secured FAT32 
+0xEB,Corrupted fault-tolerant FAT32 mirrored slave volume 
+0xCD,Memory dump 
+0xCE,Secured FAT16B 
+0xCF,Secured extended partition with LBA 
+0xD0,Secured FAT partition (larger than 32 MB)
+0xD1,Secured FAT12 
+0xD4,Secured FAT16 
+0xD5,Secured extended partition with CHS addressing 
+0xD6,Secured FAT16B 
+0xD8,CP/M-86 
+0xDA,Non-file system data/Shielded disk
+0xDB,CP/M-86, Concurrent CP/M-86, Concurrent DOS/CTOS/boot image for x86 supervisor CPU (SCPU) module/FAT32 system restore partition (DSR)
+0xDD,Hidden memory dump
+0xDE,FAT16 utility/diagnostic partition
+0xDF,DG/UX virtual disk manager/EMBRM/Aviion
+0xE0,ST AVFS
+0xE1,FAT12 (≤16 MB)
+0xE3,Read-only FAT12 
+0xE4,FAT16 (≤32 MB)
+0xE5,Logical sectored FAT12 or FAT16
+0xE6,Read-only FAT16 
+0xE8,Linux Unified Key Setup
+0xEB,BFS
+0xEC,SkyFS
+0xED,EDC loader/Was proposed for GPT hybrid MBR
+0xEE,GPT protective MBR
+0xEF,EFI system partition. Can be a FAT12, FAT16, FAT32 (or other) file system
+0xF0,PA-RISC Linux boot loader; must reside in first physical 2 GB
+0xF2,Sperry IT MS-DOS 3.x, Unisys MS-DOS 3.3, Digital Research DOS Plus 2.1 	Logical sectored FAT12 or FAT16 secondary partition
+0xF4,FAT16B/Single volume partition for NGF or TwinFS
+0xF5,MD0-MD9 multi volume partition for NGF or TwinFS
+0xF6,Read-only FAT16B 
+0xF7,EFAT/Solid State file system
+0xF9,pCache ext2/ext3 persistent cache
+0xFB,VMware ESX 	VMware VMFS file system partition
+0xFC,VMware swap / VMKCORE kernel dump partition
+0xFD,Linux RAID superblock with auto-detect
+0xFE,LANstep/PS/2 IML partition/PS/2 recovery partition (FAT12 reference disk floppy image), (corresponds with 01h if activated, all other partitions +10h then)/Disk Administration hidden partition/Old Linux LVM 
+0xFF,XENIX bad block table (see 02h and 03h)
