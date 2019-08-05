@@ -39,9 +39,13 @@ def print_mbr(mbr):
     print('-'*103) 
 
 def print_gpt_information(gpt):
+    if gpt == None:
+        return
     print(gpt.disk_info())
 
 def print_gpt_partitions(gpt):
+    if gpt == None:
+        return
     r = gpt.ppartitions()
     t = PrettyTable(['Index','Type GUID','Part GUID','First LBA','Last LBA','Flag attribute','Partition Name'])
     for i in r:
@@ -51,12 +55,16 @@ def print_gpt_partitions(gpt):
     print(t)
 
 def print_gpt(gpt):
+    if gpt == None:
+        return
     print('-*'*25+'GPT'+'-*'*25)
     print_gpt_information(gpt)
     print_gpt_partitions(gpt)
     print('-'*103)
 
 def print_gpt_partition(gpt,i):
+    if gpt == None:
+        return
     r = gpt.partition(i-1)
     t = PrettyTable(['Index','Type GUID','Part GUID','First LBA','Last LBA','Flag attribute','Partition Name'])
     t.add_row(r)

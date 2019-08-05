@@ -323,6 +323,8 @@ def analyze(args):
     verbose('Signature:\n'+str(sign))
     ## Is a MBR data?
     if sign == b'\x55\xaa':
+        mbr = None
+        gpt = None
         verbose("Detected MBR sector, proceed with extraction");
         mbr = MBR(header);
         verbose("There also a GPT partition? "+str(mbr.gpt));
@@ -331,33 +333,6 @@ def analyze(args):
             verbose("Found a GPT protective MBR partition.")
             gpt = GPT(reader)
         return mbr,gpt
-
-
-
-                    ## THERE IS NULL BYTES. THIS IS NOT A FIX!
-        #            name = ""
-        #            for t in p[i][0]:
-        #                if t != '\x00':
-        #                    name +=t
-        #                else:
-        #                    break
-                    
-        #            st = p[i][1]
-        #            end = p[i][2]
-        #            print("Dumping partition "+i+' named '+name)
-        #            subprocess.check_output(['dd','if='+args.filename,'of='+name,'bs=512','skip='+str(st),'count='+str(end-st)])
-        #ch = input('Do you want to dump the partitions? [y/N] ' )
-        #if ch.strip() == 'y':
-        #    verbose('Dump data')
-        #    for i in p:
-        #        verbose('Dumping partition '+i)
-        #        t = p[i]
-        #        verbose(str(t))
-        #        if t[2] == 0x00:
-        #            print("Partition "+i+" is empty, skipping...")
-        #            continue
-        #        verbose('Starting offset '+hex(t[4]*512))
-        #        subprocess.check_output(['dd','if='+args.filename,'of='+args.filename+'.part'+i,'bs=512','skip='+str(t[4]),'count='+str(t[5])])
     else:
         print("Can not find MBR signature. Exiting...")
         return
